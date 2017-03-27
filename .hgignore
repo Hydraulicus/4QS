@@ -1,0 +1,12 @@
+.idea
+
+syntax: glob
+*.*~
+
+node_modules/
+
+syntax: regexp
+^tmp\/
+^\.idea\/
+^\.DS_Store\/
+
