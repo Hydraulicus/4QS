@@ -16,15 +16,21 @@ body
   flex-direction: column
 
 .flex_item
-  flex: 1 0 12rem
-  padding-bottom: 6rem
+  flex: 1 0 20rem
+  padding-bottom: 12rem
+  @media screen and (max-width: 568px)
+      flex: 1 0 10rem
+      padding-bottom: 6rem
+
+//Media Queries for Standard Devices
+//https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 
 .flex_txt_block
   flex: 1 1 auto
   color: #444
   font-family: sans-serif
   font-size: 0.95rem
-  padding: 5% 15%
+  padding: 2% 15%
   margin: auto
 
 

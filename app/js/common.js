@@ -54,7 +54,7 @@ function elementRender(obj) {
         backing();
     };
 
-    var _scrolltop = window.pageYOffset || document.documentElement.scrollTop;
+    var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
     var scrollTimer;
 
     function scroll_handler() {
@@ -65,7 +65,7 @@ function elementRender(obj) {
         }, 300);
 
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-        var delta = scrolled - _scrolltop;
+        var delta = scrolled - currentScroll;
 
         if (delta > 0 && !downAnimationInAction) {
             downAnimationInAction = true;
@@ -77,7 +77,7 @@ function elementRender(obj) {
             downAnimationInAction = false;
             scrollUp();
         }
-        _scrolltop = scrolled;
+        currentScroll = scrolled;
     };
 
     window.addEventListener("scroll", scroll_handler);
